@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_end(form) }}
+
+    {% for text in texts %}
+        {{ text.message }}
+        {{ text.dateCreation|date }}
+    {% endfor %}
+{% endblock %}
